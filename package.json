@@ -6,7 +6,8 @@
   "scripts": {
     "createtoc": "node buildtoc.js 1st-semester-raw.md 1sttoc.md && node buildtoc.js 2nd-semester-raw.md 2ndtoc.md",
     "concat": "cat header.md 1sttoc.md 1st-semester-raw.md > 1st-semester.md && cat header.md 2ndtoc.md 2nd-semester-raw.md > 2nd-semester.md",
-    "build": "npm run createtoc && npm run concat"
+    "build": "npm run createtoc && npm run concat",
+    "all": "npm run build && git add --all && git commit -m\"Automated commit\" && git push "
   },
   "author": "Jonas Holbech",
   "license": "ISC"

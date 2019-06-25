@@ -1,11 +1,23 @@
 # JavaScript Dictionary
-1. [Comparisons](#comparisons)
-2. [Data Attributes](#dataattributes)
-3. [fetch](#fetch)
-4. [forEach](#foreach)
-5. [.getAttribute](#getattribute)
-6. [return](#return)
-7. [.setAttribute](#setattribute)
+1. [.appendChild](#appendchild)
+2. [.cloneNode](#clonenode)
+3. [Comparisons](#comparisons)
+4. [Data Attributes](#dataattributes)
+5. [fetch](#fetch)
+6. [forEach](#foreach)
+7. [.getAttribute](#getattribute)
+8. [.innerHTML](#innerhtml)
+9. [return](#return)
+10. [.setAttribute](#setattribute)
+11. [.textContent](#textcontent)
+## `.appendChild`
+
+TODO
+
+## `.cloneNode`
+
+TODO
+
 ## Comparisons
 
 Especially for [conditions](#if-else-else-if), the comparison operators become important, and there's just a few we need to know.
@@ -176,7 +188,11 @@ let stupid = img.jonas; // stupid = null
 
 There are some minor differences though. Take a look at [this discussion](https://stackoverflow.com/questions/19737143/difference-between-object-src-and-object-getattributesrc) if you're curious, or just stick to `.getAttribute`
 
-## `return``
+## `.innerHTML`
+
+TODO
+
+## `return`
 
 TODO
 
@@ -191,3 +207,7 @@ img.setAttribute("src", "selfie.png");
 ```
 
 You can even set non-standard attributes on an element, but for that, you really should use [Data Attributes](#dataattributes)
+
+## `.textContent`
+
+TODO
