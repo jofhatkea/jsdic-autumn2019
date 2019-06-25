@@ -1,0 +1,7 @@
+1. [Comparisons](#comparisons)
+2. [Data Attributes](#dataattributes)
+3. [fetch](#fetch)
+4. [forEach](#foreach)
+5. [.getAttribute](#getattribute)
+6. [return](#return)
+7. [.setAttribute](#setattribute)
