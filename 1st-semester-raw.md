@@ -664,8 +664,3 @@ const students = [];
 //FINE:
 students.push("Jonas");
 ```
-
-## `window`
-
-TODO
-https://www.w3schools.com/jsref/obj_window.asp
