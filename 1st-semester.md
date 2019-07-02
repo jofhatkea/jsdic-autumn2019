@@ -31,7 +31,6 @@
 30. [Strings](#strings)
 31. [.style](#style)
 32. [variables, let, const & var](#variablesletconstvar)
-33. [window](#window)
 ## `.addEventListener`
 
 A [method](#method) on [Nodes](#node) allowing us to hook up [events](#events). When the event occurs, it (JavaScript) fires of a "callback" (a function).
@@ -698,8 +697,3 @@ const students = [];
 //FINE:
 students.push("Jonas");
 ```
-
-## `window`
-
-TODO
-https://www.w3schools.com/jsref/obj_window.asp

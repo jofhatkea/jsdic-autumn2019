@@ -10,6 +10,7 @@
 9. [return](#return)
 10. [.setAttribute](#setattribute)
 11. [.textContent](#textcontent)
+12. [window](#window)
 ## `.appendChild`
 
 TODO
@@ -211,3 +212,50 @@ You can even set non-standard attributes on an element, but for that, you really
 ## `.textContent`
 
 TODO
+
+## `window`
+
+The `window`is a global object living in the browser.
+
+Once again, do a `console.dir(window)` straight in the console to see what it contains (hint: a lot).
+
+Some of it is really cool, like we can ask the browser how big the window is :-)
+
+Basically, `window` contains a huge portion of the language. So, whenever you call a JavaScript function, there's a pretty good chance it actually lives on the `window` object.
+
+For instance, the function [setTimeout](#settimeout) lives on the window object, which in turn means you can call it like this:
+
+```js
+window.setTimeout....
+// as well as
+setTimeout....
+```
+
+Further more, all function you declare like this:
+
+```js
+function test() {
+  console.log("Hi mom");
+}
+```
+
+are automatically added to the window object (so we can once again call the function like: `window.test()` as well as `test()`)
+
+So, why is this important?
+
+1. You need to know it, you'll see countless examples using it
+2. It can be damn usefull to take your own local functions / variables and "manually hoisting" them by assigning them to the `window` object (don't overdo it)
+
+E.g.
+
+```js
+function test() {
+  //the following variable ONLY exists in this function (local)
+  const age = 40;
+  //this one is added to the window object, so it can be accessed everywhere (once the function is called)
+  const kids = 3;
+  window.kids = kids;
+}
+```
+
+You can reed more at https://www.w3schools.com/jsref/obj_window.asp

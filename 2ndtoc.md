@@ -9,3 +9,4 @@
 9. [return](#return)
 10. [.setAttribute](#setattribute)
 11. [.textContent](#textcontent)
+12. [window](#window)

@@ -30,4 +30,3 @@
 30. [Strings](#strings)
 31. [.style](#style)
 32. [variables, let, const & var](#variablesletconstvar)
-33. [window](#window)

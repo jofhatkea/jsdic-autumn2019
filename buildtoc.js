@@ -1,3 +1,4 @@
+//TODO not used?
 var args = process.argv.slice(2);
 let file = args[0];
 const output = args[1];
