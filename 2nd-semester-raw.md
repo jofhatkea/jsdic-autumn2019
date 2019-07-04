@@ -1,6 +1,19 @@
 ## `.appendChild`
 
-TODO
+`parent.appendChild(elem)` takes a [Node](#node) (parent) and appends another [node](#node) as a child (elem).
+
+```js
+const myDiv = document.createElement("div");
+document.querySelector("main").appendChild(myDiv);
+/*
+The struture is now something like
+<main>
+  <div></div>
+</main>  
+*/
+```
+
+Note that an element can only have a single child, which means that if you append some existing element to another [node](#node) it will "physically" be moved in the [DOM](#dom)
 
 ## `.cloneNode`
 
