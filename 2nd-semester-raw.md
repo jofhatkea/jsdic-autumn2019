@@ -163,7 +163,7 @@ So, each item in the list (`skills`) is passed to the function (`showSkills`), a
 
 In plainer english (perhaps), "I want to do something to each skill (`skills`), give them to me, one at a time, and call it skill"
 
-OK, so let's do the same thing with another good friend, [querySelectorAll](#queryselectorall).
+OK, so let's do the same thing with another good friend, [`.querySelectorAll`](#queryselectorall).
 
 ```javascript
 let allHeaders = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
@@ -234,7 +234,7 @@ TODO this is hard
 
 ## `.setAttribute`
 
-Set an attribute on a node.
+Sets an attribute on a node.
 
 ```javascript
 // Element.setAttribute(name, value);
@@ -250,7 +250,25 @@ TODO
 
 ## `.textContent`
 
-TODO
+Sets the text content (surprise) of a [node](#node). Unlike [`.innerHTML`][#innerhtml] it can only manipulate text, so no HTML is allowed.
+
+```js
+/*
+The HTML
+<section>
+  <h1>Hello world</h1>
+</section>
+*/
+//1. grab the element
+const header = document.querySelector("h1");
+
+//2. read the textContent
+console.log(header.textContent); //outputs "Hello world"
+
+//3. change the content
+header.textContent = "Hi mom";
+console.log(header.textContent); //outputs "Hi mom";
+```
 
 ## `window`
 
