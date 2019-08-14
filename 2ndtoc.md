@@ -8,5 +8,6 @@
 8. [.innerHTML](#innerhtml)
 9. [return](#return)
 10. [.setAttribute](#setattribute)
-11. [.textContent](#textcontent)
-12. [window](#window)
+11. [Template Literals](#templateliterals)
+12. [.textContent](#textcontent)
+13. [window](#window)

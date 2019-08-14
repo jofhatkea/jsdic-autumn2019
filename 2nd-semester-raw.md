@@ -219,7 +219,14 @@ There are some minor differences though. Take a look at [this discussion](https:
 
 ## `.innerHTML`
 
-TODO
+`.innerHTML` changes the content (overwrites) of a selected [node](#node). Unlike [`.textContent`](#textcontent) it can create HTML for us. e.g
+
+```js
+document.querySelector("article").innerHTML =
+  "<h1>This now contains a heading</h1><p>and some other stuff</p>";
+```
+
+Warning: Since `.innerHTML` can add HTML, it can also be used to add JavaScript to the page. This method should NOT be used if you don't trust the content (e.g. if it's user generated). [`.textContent`](#textcontent) is a safe alternative.
 
 ## `return`
 
@@ -236,6 +243,10 @@ img.setAttribute("src", "selfie.png");
 ```
 
 You can even set non-standard attributes on an element, but for that, you really should use [Data Attributes](#dataattributes)
+
+## Template Literals
+
+TODO
 
 ## `.textContent`
 

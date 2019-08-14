@@ -9,8 +9,9 @@
 8. [.innerHTML](#innerhtml)
 9. [return](#return)
 10. [.setAttribute](#setattribute)
-11. [.textContent](#textcontent)
-12. [window](#window)
+11. [Template Literals](#templateliterals)
+12. [.textContent](#textcontent)
+13. [window](#window)
 ## `.appendChild`
 
 `parent.appendChild(elem)` takes a [Node](#node) (parent) and appends another [node](#node) as a child (elem).
@@ -232,7 +233,14 @@ There are some minor differences though. Take a look at [this discussion](https:
 
 ## `.innerHTML`
 
-TODO
+`.innerHTML` changes the content (overwrites) of a selected [node](#node). Unlike [`.textContent`](#textcontent) it can create HTML for us. e.g
+
+```js
+document.querySelector("article").innerHTML =
+  "<h1>This now contains a heading</h1><p>and some other stuff</p>";
+```
+
+Warning: Since `.innerHTML` can add HTML, it can also be used to add JavaScript to the page. This method should NOT be used if you don't trust the content (e.g. if it's user generated). [`.textContent`](#textcontent) is a safe alternative.
 
 ## `return`
 
@@ -249,6 +257,10 @@ img.setAttribute("src", "selfie.png");
 ```
 
 You can even set non-standard attributes on an element, but for that, you really should use [Data Attributes](#dataattributes)
+
+## Template Literals
+
+TODO
 
 ## `.textContent`
 
