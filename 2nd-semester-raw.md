@@ -250,7 +250,7 @@ TODO
 
 ## `.textContent`
 
-Sets the text content (surprise) of a [node](#node). Unlike [`.innerHTML`][#innerhtml] it can only manipulate text, so no HTML is allowed.
+Sets the text content (surprise) of a [node](#node). Unlike [.innerHTML][#innerhtml] it can only manipulate text, so no HTML is allowed.
 
 ```js
 /*
