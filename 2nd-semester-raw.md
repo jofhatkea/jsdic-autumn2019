@@ -17,7 +17,35 @@ Note that an element can only have a single child, which means that if you appen
 
 ## `.cloneNode`
 
-TODO
+`const copy = myNode.cloneNode(true)` makes a copy of a [Node](#node) (in this case `myNode`) and returns it (in this case, it's stored as `copy`).
+
+The copied [Node](#node) can then added to the DOM using [`.appendChild`](#appendchild)
+
+The method can be called, passing in either `true` or `false`. This tells JavaScript whether to include the children as well.
+
+```js
+/*given this DOM:
+<article></article>
+<section>
+  <header>
+    <h1>Hi mom</h1>
+  </header>
+</section>
+*/
+//1. we select it
+const nodeToBeCopied = document.querySelector("section");
+
+//2. we can make a copy that includes "the children" (e.g header, h1)
+const copy = nodeToBeCopied.cloneNode(true);
+
+//or we can make a copy that only includes the element (e.g. an empty <section>)
+//Personally, I have never used this
+//const copy = nodeToBeCopied.cloneNode(false);
+
+//3. we could change some stuff in our clone, but for now, let's just add it to the DOM
+const parentNode = document.querySelector("article");
+parentNode.appendChild(copy);
+```
 
 ## Comparisons
 
