@@ -230,7 +230,7 @@ Warning: Since `.innerHTML` can add HTML, it can also be used to add JavaScript 
 
 ## `return`
 
-TODO
+TODO this is hard
 
 ## `.setAttribute`
 
