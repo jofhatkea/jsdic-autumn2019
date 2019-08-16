@@ -244,7 +244,36 @@ Warning: Since `.innerHTML` can add HTML, it can also be used to add JavaScript 
 
 ## `return`
 
-TODO this is hard
+Personally, I found this concept really hard when I started out, so don't worry if you get kind of lost now.
+`return` does two things
+
+1. It returns something from a function
+2. It stops the following code in the function from running.
+
+But that's not why we use it. We use it to make our code more reusable.
+
+Take this example
+
+```js
+function calc(a, b) {
+  const sum = a + b;
+  return sum;
+}
+const mySum = calc(10, 5);
+```
+
+What does `mySum` contain now? If you guessed 15, go make your self a nice cup of ☕️. You just grasped what I failed to do for a long time.
+
+The `calc` function is reusable, and we can pass in any numbers we like, we can even pass in another function as parameters:
+
+```js
+const bigSum = calc(calc(1, 2), calc(3, 4));
+console.log(bigSum); //outputs 10
+```
+
+Does that make sense?
+
+Try creating your own `calculateTips` function that takes an arugument and returns the passed value multiplied by 1.1
 
 ## `.setAttribute`
 
@@ -259,6 +288,8 @@ img.setAttribute("src", "selfie.png");
 You can even set non-standard attributes on an element, but for that, you really should use [Data Attributes](#dataattributes)
 
 ## Template Literals
+
+Basically it's a human-readable version of [string concatenation](#concatenation).
 
 TODO
 
