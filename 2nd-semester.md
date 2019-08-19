@@ -291,7 +291,34 @@ You can even set non-standard attributes on an element, but for that, you really
 
 Basically it's a human-readable version of [string concatenation](#concatenation).
 
-TODO
+Normal concatenation can become a bit hard when trying to concatenate stuff like this:
+
+```html
+<img src="myimage.png" alt="Selfie" />
+```
+
+### Standard concatenation
+
+```js
+const path = "myimage.png";
+const alt = "Selfie";
+const img = '<img src="' + path + '" alt="' + alt + '">';
+//it can be made a litle nice if we switch to singe quotes
+const img = '<img src="' + path + '" alt="' + alt + '">';
+```
+
+Template literals uses the back tick ( ` ) and curly braces and a dollar sign to "interpolate" our variables. (Fancy word for using a variable in a string).
+
+1. The string must be wrapped in backticks (\`my string\`)
+2. Variables are used by wrapping them in \${variableGoesHere}
+
+```js
+const path = "myimage.png";
+const alt = "Selfie";
+const img = `<img src="${path}" alt="${alt}">`;
+```
+
+Personally, I think this (new) syntax is a whole lot easier to read...
 
 ## `.textContent`
 
