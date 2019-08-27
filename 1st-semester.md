@@ -234,6 +234,8 @@ console.log(2 > 1);
 When developing (and this goes for CSS too), caching can be quite irritating. So if you disable the cache (while devtools are open), you'll save yourself from lots of pain
 ![Disabling the cache](assets/disableCache.gif "Disabling the cache")
 
+TODO: assets not copied
+
 ## Datatypes
 
 Used to describe the various types of data we can store in variables.
@@ -609,7 +611,7 @@ State variables aren't really a JavaScript thing, it's a common concept in all p
 ```javascript
 let counter = 0; //this is our state variable
 
-document.querySelector("p").addEventListener(e => {
+document.querySelector("p").addEventListener("click", e => {
   counter++;
   if (counter > 10) {
     console.log("You clicked the counter more than 10 times");
