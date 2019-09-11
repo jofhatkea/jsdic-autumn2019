@@ -201,8 +201,6 @@ console.log(2 > 1);
 When developing (and this goes for CSS too), caching can be quite irritating. So if you disable the cache (while devtools are open), you'll save yourself from lots of pain
 ![Disabling the cache](assets/disableCache.gif "Disabling the cache")
 
-TODO: assets not copied
-
 ## Datatypes
 
 Used to describe the various types of data we can store in variables.

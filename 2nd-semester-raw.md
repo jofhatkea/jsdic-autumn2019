@@ -161,7 +161,7 @@ This will output:
 
 So, each item in the list (`skills`) is passed to the function (`showSkills`), and in that function, the item is referred to as `skill`
 
-In plainer english (perhaps), "I want to do something to each skill (`skills`), give them to me, one at a time, and call it skill"
+In plainer english (perhaps), "I want to do something to each skill (`skills`), give them to me, one at a time, and call it `skill`"
 
 OK, so let's do the same thing with another good friend, [`.querySelectorAll`](#queryselectorall).
 
@@ -272,6 +272,110 @@ img.setAttribute("src", "selfie.png");
 ```
 
 You can even set non-standard attributes on an element, but for that, you really should use [Data Attributes](#dataattributes)
+
+## `.sort`
+
+A method used to sort [arrays](#arrays)
+
+It sorts the array "in place", meaning that it will modify the original array!
+
+Example:
+
+```js
+const ages = [8, 2, 4];
+ages.sort();
+//ages will now contain [2,4,8]
+```
+
+But most of the time that's not enough. `.sort()` converts (internally) all elements into strings, which means that 90 comes before 8 when using sort!
+so:
+
+```javascript
+const ages = [10, 1, 23, 2];
+ages.sort();
+//ages now contains [1, 10, 2, 23]
+```
+
+Not what we usually want, right?
+
+### Advanced usage
+
+We can pass a function to `.sort()` that it can use when sorting. It might seem a bit strange, but with a bit of trial and error, we can make it work.
+
+The idea is that the function compares two items in the array at a time, untill it knows the position of all items.
+
+Technically, we create a function that receives two arguments and then we return a value, depending on which is bigger.
+
+Let's call them item `a` and `b`.
+If `a` is less than `b`, we return `-1`
+If they are equal, we return `0`
+If `a` is bigger than `b` we return `1``
+
+So, some sample code for this would be:
+
+```javascript
+function compare(a, b) {
+  if (a < b) {
+    return -1;
+  }
+  if (a > b) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
+```
+
+And then we can use the sorting function with `.sort()`:
+
+```javascript
+const ages = [10, 1, 23, 2];
+function compare(a, b) {
+  if (a < b) {
+    return -1;
+  }
+  if (a > b) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
+ages.sort(compare);
+//ages now contains [1,2,10,23];
+```
+
+This function will work for strings as well, but beware, that capital letters comes before lower-case. So "Jx" will come before "ja". (in this case you need to convert the strings to lower-case before compairing).
+
+### Sorting objects
+
+The final piece of the puzzle is sorting objects. It works exactly the same way, except we have to look at the properties of the objects we are compairing.
+
+```javascript
+const objs = [
+  {
+    name: "Jonas"
+  },
+  {
+    name: "Jens"
+  },
+  {
+    name: "Lasse"
+  }
+];
+function compare(a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+}
+objs.sort(compare);
+//objs will now contain the objects in the following order: Jens, Jonas, Lasse
+```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 ## Template Literals
 
