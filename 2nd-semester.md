@@ -4,15 +4,16 @@
 3. [Comparisons](#comparisons)
 4. [Data Attributes](#dataattributes)
 5. [fetch](#fetch)
-6. [forEach](#foreach)
-7. [.getAttribute](#getattribute)
-8. [.innerHTML](#innerhtml)
-9. [return](#return)
-10. [.setAttribute](#setattribute)
-11. [.sort](#sort)
-12. [Template Literals](#templateliterals)
-13. [.textContent](#textcontent)
-14. [window](#window)
+6. [.filter](#filter)
+7. [forEach](#foreach)
+8. [.getAttribute](#getattribute)
+9. [.innerHTML](#innerhtml)
+10. [return](#return)
+11. [.setAttribute](#setattribute)
+12. [.sort](#sort)
+13. [Template Literals](#templateliterals)
+14. [.textContent](#textcontent)
+15. [window](#window)
 ## `.appendChild`
 
 `parent.appendChild(elem)` takes a [Node](#node) (parent) and appends another [node](#node) as a child (elem).
@@ -150,6 +151,62 @@ fetch("someURL", {
 ```
 
 The two examples both utilizes the `.json()`method to parse it as `JSON`, bit there are [other options](https://developer.mozilla.org/en-US/docs/Web/API/Body)
+
+## `.filter`
+
+Filters out items from an array (usually a list og JSON objects) and returns a new array that only includes the allowed items.
+
+`.filter` works on an array and accepts a function as it's only argument. That function should return `true` if the item should be allowed in the new array, or `false` if it shouldn't.
+
+The function received one item at a time (like [forEach](#foreach)).
+
+### The Simple Version
+
+```js
+const ages = [2, 5, 3, 8, 12];
+//create an array that only holds ages greater than 5
+const filteredAges = ages.filter(allowOverFive);
+
+function allowOverFive(age) {
+  //we return the output of a comparison (true/false)
+  return age > 5;
+  /*
+  this could be rewritten as
+  if(age > 5){
+    return true;
+  } else {
+    return false
+  }
+  */
+}
+console.log(filteredAges); //outputs [8,12];
+```
+
+But as always, our requirements might be different, what if we have an array of objects (could be JSON) instead?
+
+Well, it's not too different actually
+
+```js
+const people = [
+  {
+    name: "Jonas",
+    age: 41
+  },
+  {
+    name: "Storm",
+    age: 10
+  },
+  {
+    name: "Po",
+    age: 23
+  }
+];
+//Let's grab all persons over 17
+//This time, done with an arrow function
+const filteredPeople = people.filter(person => {
+  return person.age > 17;
+});
+```
 
 ## `forEach`
 
