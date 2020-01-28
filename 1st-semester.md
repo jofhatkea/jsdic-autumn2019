@@ -551,7 +551,7 @@ let links = document.querySelectorAll("header a");
 
 ## `.removeEventListener`
 
-Used to remove an existing eventlistener (previously set with [addEventListener](#addevenetlistener)). The call to `removeEventListener` must have the exact same call back as the call to [.addEventListener](#addeventlistener). This means that events registered with anonymous functions are really difficult to remove.
+Used to remove an existing eventlistener (previously set with [addEventListener](#addeventlistener)). The call to `removeEventListener` must have the exact same call back as the call to [.addEventListener](#addeventlistener). This means that events registered with anonymous functions are really difficult to remove.
 
 ```javascript
 //first we register an eventlistener to an element
