@@ -136,6 +136,62 @@ fetch("someURL", {
 
 The two examples both utilizes the `.json()`method to parse it as `JSON`, bit there are [other options](https://developer.mozilla.org/en-US/docs/Web/API/Body)
 
+## `.filter`
+
+Filters out items from an array (usually a list og JSON objects) and returns a new array that only includes the allowed items.
+
+`.filter` works on an array and accepts a function as it's only argument. That function should return `true` if the item should be allowed in the new array, or `false` if it shouldn't.
+
+The function received one item at a time (like [forEach](#foreach)).
+
+### The Simple Version
+
+```js
+const ages = [2, 5, 3, 8, 12];
+//create an array that only holds ages greater than 5
+const filteredAges = ages.filter(allowOverFive);
+
+function allowOverFive(age) {
+  //we return the output of a comparison (true/false)
+  return age > 5;
+  /*
+  this could be rewritten as
+  if(age > 5){
+    return true;
+  } else {
+    return false
+  }
+  */
+}
+console.log(filteredAges); //outputs [8,12];
+```
+
+But as always, our requirements might be different, what if we have an array of objects (could be JSON) instead?
+
+Well, it's not too different actually
+
+```js
+const people = [
+  {
+    name: "Jonas",
+    age: 41
+  },
+  {
+    name: "Storm",
+    age: 10
+  },
+  {
+    name: "Po",
+    age: 23
+  }
+];
+//Let's grab all persons over 17
+//This time, done with an arrow function
+const filteredPeople = people.filter(person => {
+  return person.age > 17;
+});
+```
+
 ## `forEach`
 
 The way the cool kids loop through [arrays](#arrays) and [Nodelists](#nodelist).
