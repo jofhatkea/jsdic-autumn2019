@@ -47,7 +47,7 @@ function callback(e) {
 }
 ```
 
-Often used with [anonymous functions](#anonymous-functions).
+Often used with [anonymous functions](#anonymousfunctions).
 
 ```javascript
 someStuff.addEventListener("click", function(e) {
