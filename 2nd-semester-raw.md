@@ -49,7 +49,7 @@ parentNode.appendChild(copy);
 
 ## Comparisons
 
-Especially for [conditions](#if-else-else-if), the comparison operators become important, and there's just a few we need to know.
+Especially for [conditions](#ifelseelseif), the comparison operators become important, and there's just a few we need to know.
 
 | Operator | Meaning                                       | Example             |
 | -------- | --------------------------------------------- | ------------------- |

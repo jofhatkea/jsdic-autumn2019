@@ -61,7 +61,7 @@ To make this really clever, we need a [loop](#foreach)
 
 ### `.length`
 
-A [property](#property) on [arrays](#arrays) & [strings](#string) telling us how many items are in it
+A property on [arrays](#arrays) & [strings](#strings) telling us how many items are in it
 
 ```javascript
 // with an array
@@ -204,7 +204,7 @@ When developing (and this goes for CSS too), caching can be quite irritating. So
 ## Datatypes
 
 Used to describe the various types of data we can store in variables.
-E.g. [Numbers](#number), [Strings](#string), [Arrays](#array), [Booleans](#boolean)
+E.g. [Numbers](#number), [Strings](#strings), [Arrays](#arrays), [Booleans](#boolean)
 
 ## `document`
 
@@ -403,7 +403,7 @@ if (hobby === "Horses") {
 
 ## Inline Scripts
 
-See also [Linking our JS files](#linking-our-js-files).
+See also [Linking our JS files](#linkingourjsfiles).
 
 Besides having our JS in separate files, we can embed it directly in our HTML documents like this:
 
@@ -423,7 +423,7 @@ This limits code-reuse quite a lot, but it's excellent for quick tests
 
 ## Linking our JS files
 
-See also [Inline Scripts](#inline-scripts)
+See also [Inline Scripts](#inlinescripts)
 
 The proper way of linking our script is like this:
 
@@ -447,7 +447,7 @@ let x = Math.random() * 11; //x is now a number between 0 and 10.99999999.....
 
 ### `.floor()`
 
-`Math.floor()` takes number as argument, rounds it down and returns it, making it an ideal partner for [`Math.random()`](#random)
+`Math.floor()` takes number as argument, rounds it down and returns it, making it an ideal partner for [`Math.random()`](#math)
 
 ```javascript
 let y = Math.floor(1.9); // y is now 1
@@ -476,7 +476,7 @@ console.dir(b);
 
 ## NodeList
 
-A NodeList is a list of nodes, usually gotten via [.querySelectorAll](#queryselectorall). While not technically an [`array`](#array), it shares a lot of the same capabilities, it has a `.length` and we can loop through it.
+A NodeList is a list of nodes, usually gotten via [.querySelectorAll](#queryselectorall). While not technically an [`array`](#arrays), it shares a lot of the same capabilities, it has a `.length` and we can loop through it.
 
 ## Number
 
@@ -540,7 +540,7 @@ In this case, a selector is a CSS selector used in JS. Methods such as [.querySe
 With the right selectors, we can grab almost anything, and getting good at the various CSS selectors will make our lives so much easier.
 
 You can find [a great reference on w3schools](https://www.w3schools.com/cssref/css_selectors.asp)
-and for an [awesome interactive tutorial at CSS Diner](http://flukeout.github.io/)
+and an [awesome interactive tutorial at CSS Diner](http://flukeout.github.io/)
 
 ## `setInterval`
 
