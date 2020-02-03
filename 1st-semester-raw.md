@@ -463,7 +463,7 @@ let rand = Math.floor(Math.random() * 11);
 
 ## method
 
-Often used interchangeably with the term [function](#function), but there's a slight difference. A method is a function that lives on/in an object, and it's invoked using the dot operator. So `.querySelector()` is a method, that works on an element. `.random()` and it's brothers, are methods that work on the `Math` object.
+Often used interchangeably with the term [function](#functions), but there's a slight difference. A method is a function that lives on/in an object, and it's invoked using the dot operator. So `.querySelector()` is a method, that works on an element. `.random()` and it's brothers, are methods that work on the `Math` object.
 
 ## Node
 
