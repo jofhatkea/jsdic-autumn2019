@@ -338,7 +338,7 @@ Functions are a huge topic, so let's dive in. First off,
 
 ### Naming functions
 
-Functions follow the same naming rules as [variables](#variables) and you can't (you can but shouldn't) call a functions the same thing you've called a variables, so the following is generally really bad:
+Functions follow the same naming rules as [variables](#variablesletconstvar) and you can't (you can but shouldn't) call a functions the same thing you've called a variables, so the following is generally really bad:
 
 ```javascript
 // BAD STUFF HERE!!!
