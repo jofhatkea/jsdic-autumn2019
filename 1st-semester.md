@@ -107,7 +107,7 @@ let numChars = name.length; // numChars is 5
 
 ## Boolean
 
-Booleans are a special [datatype](#datatypes) that can only contain the values `true` or `false` (no quotes). They are often used as "gates" / [state variables](#state-variables)
+Booleans are a special [datatype](#datatypes) that can only contain the values `true` or `false` (no quotes). They are often used as "gates" / [state variables](#statevariables)
 
 ```javascript
 let myDiv = document.querySelector("div");
