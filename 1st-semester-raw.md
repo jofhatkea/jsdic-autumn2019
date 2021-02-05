@@ -17,7 +17,7 @@ function callback(e) {
 Often used with [anonymous functions](#anonymousfunctions).
 
 ```javascript
-someStuff.addEventListener("click", function(e) {
+someStuff.addEventListener("click", function (e) {
   //do stuff
 });
 ```
@@ -25,7 +25,7 @@ someStuff.addEventListener("click", function(e) {
 And since ES6, with the "fat arrow" syntax:
 
 ```javascript
-someElement.addEventListener("click", e => {
+someElement.addEventListener("click", (e) => {
   //do stuff
 });
 ```
@@ -176,7 +176,7 @@ let c = "Hi";
 let d = "4";
 
 let e = a + b; //e is 5, addition
-let f = d + d; //f is "34", concatenation
+let f = d + d; //f is "44", concatenation
 let g = a + b + c; //g is "5Hi", both
 let h = a + "" + b; //h is "23"
 ```
@@ -576,7 +576,7 @@ State variables aren't really a JavaScript thing, it's a common concept in all p
 ```javascript
 let counter = 0; //this is our state variable
 
-document.querySelector("p").addEventListener("click", e => {
+document.querySelector("p").addEventListener("click", (e) => {
   counter++;
   if (counter > 10) {
     console.log("You clicked the counter more than 10 times");
